@@ -10,7 +10,7 @@ Common Azure terraform module to create a Availability Set
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "=2.46.0"
     }
   }
@@ -32,14 +32,14 @@ resource "azurerm_resource_group" "rg" {
 }
 
 module "availability_set" {
-  source  = "danielkomaz/availability-set/azurerm"
-  version = "0.1.0"
-  rg_name = azurerm_resource_group.rg_name
-  location = azurerm_resource_group.rg_location
+  source      = "danielkomaz/availability-set/azurerm"
+  version     = "0.1.0"
+  rg_name     = azurerm_resource_group.rg_name
+  location    = azurerm_resource_group.rg_location
   environment = "dev"
   client_name = "contoso"
-  managed = false
-  stack = "web"
+  managed     = false
+  stack       = "web"
 }
 ```
 
