@@ -1,3 +1,8 @@
+variable "rg_name" {
+  description = "Name of Resource Group to put the Availability Set in."
+  type        = string
+}
+
 variable "location" {
   description = "Azure region to use"
   type        = string
@@ -21,19 +26,19 @@ variable "stack" {
 variable "name_prefix" {
   description = "Optional prefix for the generated name"
   type        = string
-  default     = ""
-}
-
-variable "custom_avail_name" {
-  description = "Optional custom availability set name"
-  type        = string
-  default     = ""
+  default     = null
 }
 
 variable "extra_tags" {
   description = "Extra tags to add"
   type        = map(string)
   default     = {}
+}
+
+variable "custom_avail_name" {
+  description = "Optional custom availability set name"
+  type        = string
+  default     = null
 }
 
 variable "platform_update_domain_count" {
