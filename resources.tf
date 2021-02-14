@@ -1,5 +1,4 @@
 resource "azurerm_availability_set" "main_avail" {
-  count               = var.count   
   name                = local.avail_name
   location            = var.location
   resource_group_name = var.rg_name

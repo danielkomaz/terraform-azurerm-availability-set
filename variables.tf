@@ -1,9 +1,3 @@
-variable "count" {
-  description = "Number of Availability Sets to create"
-  type        = string
-  default     = 1
-}
-
 variable "location" {
   description = "Azure region to use"
   type        = string
