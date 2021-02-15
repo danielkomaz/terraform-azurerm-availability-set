@@ -28,23 +28,23 @@ jobs:
       #     entrypoint: terraform
       #     args: validate
 
-      - name: Run a Terraform init (v0.13)
-        uses: docker://hashicorp/terraform:0.13.6
-        with:
-          entrypoint: terraform
-          args: init
+      # - name: Run a Terraform init (v0.13)
+      #   uses: docker://hashicorp/terraform:0.13.6
+      #   with:
+      #     entrypoint: terraform
+      #     args: init
 
-      - name: Run a Terraform validate (v0.13)
-        uses: docker://hashicorp/terraform:0.13.6
-        with:
-          entrypoint: terraform
-          args: validate
+      # - name: Run a Terraform validate (v0.13)
+      #   uses: docker://hashicorp/terraform:0.13.6
+      #   with:
+      #     entrypoint: terraform
+      #     args: validate
 
       - name: Run a Terraform init (v0.14)
         uses: docker://hashicorp/terraform:0.14.6
         with:
           entrypoint: terraform
-          args: init
+          args: init -backend=false
 
       - name: Run a Terraform validate (v0.14)
         uses: docker://hashicorp/terraform:0.14.6
