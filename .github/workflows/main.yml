@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v0.1.0
+        uses: actions/checkout@v2
 
       - name: Run a Terraform init (v0.12)
         uses: docker://hashicorp/terraform:0.12.30
