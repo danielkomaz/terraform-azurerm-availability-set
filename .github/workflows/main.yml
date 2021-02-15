@@ -16,17 +16,17 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Run a Terraform init (v0.12)
-        uses: docker://hashicorp/terraform:0.12.30
-        with:
-          entrypoint: terraform
-          args: init
+      # - name: Run a Terraform init (v0.12)
+      #   uses: docker://hashicorp/terraform:0.12.30
+      #   with:
+      #     entrypoint: terraform
+      #     args: init
 
-      - name: Run a Terraform validate (v0.12)
-        uses: docker://hashicorp/terraform:0.12.30
-        with:
-          entrypoint: terraform
-          args: validate
+      # - name: Run a Terraform validate (v0.12)
+      #   uses: docker://hashicorp/terraform:0.12.30
+      #   with:
+      #     entrypoint: terraform
+      #     args: validate
 
       - name: Run a Terraform init (v0.13)
         uses: docker://hashicorp/terraform:0.13.6
