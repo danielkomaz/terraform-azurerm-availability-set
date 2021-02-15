@@ -45,20 +45,20 @@ module "availability_set" {
 
 ## Inputs
 
-| Name                         | Description                                                                                                       | Type          | Default | Required |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------- | ------- | :------: |
-| client_name                  | Client name/account used in naming                                                                                | `string`      | n/a     |   yes    |
-| custom_avail_name            | Optional custom availbity set name. Replaces name calculation to <name_prefix><stack>-<client_name>-<environment> | `string`      | `""`    |    no    |
-| environment                  | Project environment                                                                                               | `string`      | n/a     |   yes    |
-| extra_tags                   | Extra tags to add                                                                                                 | `map(string)` | `{}`    |    no    |
-| location                     | Azure region to use                                                                                               | `string`      | n/a     |   yes    |
-| managed                      | Specifies whether the availability set is managed or not                                                          | `bool`        | n/a     |    no    |
-| name_prefix                  | Optional prefix for the generated name                                                                            | `string`      | n/a     |    no    |
-| platform_update_domain_count | Number of update domains that are used. Defaults to 5 if not set                                                  | `number`      | n/a     |    no    |
-| platform_fault_domain_count  | Number of fault domains that are used. Defaults to 3 if not set                                                   | `number`      | n/a     |    no    |
-| proximity_placement_group_id | ID of the Proximity Placement Group to which this Virtual Machine should be assigned                              | `string`      | `""`    |    no    |
-| rg_name                      | Name of Resource Group to put the Availability Set in                                                             | `string`      | n/a     |   yes    |
-| stack                        | Project stack name                                                                                                | `string`      | n/a     |   yes    |
+| Name                         | Description                                                                                        | Type          | Default | Required |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- | ------------- | ------- | :------: |
+| client_name                  | Client name/account used in naming                                                                 | `string`      | n/a     |   yes    |
+| custom_avail_name            | Optional custom availbity set name. Default name: <name_prefix><stack>-<client_name>-<environment> | `string`      | `""`    |    no    |
+| environment                  | Project environment                                                                                | `string`      | n/a     |   yes    |
+| extra_tags                   | Extra tags to add                                                                                  | `map(string)` | `{}`    |    no    |
+| location                     | Azure region to use                                                                                | `string`      | n/a     |   yes    |
+| managed                      | Specifies whether the availability set is managed or not                                           | `bool`        | n/a     |    no    |
+| name_prefix                  | Optional prefix for the generated name                                                             | `string`      | n/a     |    no    |
+| platform_update_domain_count | Number of update domains that are used. Defaults to 5 if not set                                   | `number`      | n/a     |    no    |
+| platform_fault_domain_count  | Number of fault domains that are used. Defaults to 3 if not set                                    | `number`      | n/a     |    no    |
+| proximity_placement_group_id | ID of the Proximity Placement Group to which this Virtual Machine should be assigned               | `string`      | `""`    |    no    |
+| rg_name                      | Name of Resource Group to put the Availability Set in                                              | `string`      | n/a     |   yes    |
+| stack                        | Project stack name                                                                                 | `string`      | n/a     |   yes    |
 
 ## Outputs
 
